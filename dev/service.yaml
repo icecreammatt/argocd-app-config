@@ -5,6 +5,7 @@ metadata:
 spec:
   selector:
     app: lookup
+  type: LoadBalancer
   ports:
   - port: 5000
     protocol: TCP
