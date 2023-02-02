@@ -8,4 +8,4 @@ spec:
   ports:
   - port: 5000
     protocol: TCP
-    targetPort: 8082
+    targetPort: 5000
