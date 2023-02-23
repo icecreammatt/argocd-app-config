@@ -2,7 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: argo-nginx-ingress
-  namespace: argocd
+  namespace: lookup
   annotations:
     kubernetes.io/ingress.class: "nginx"
 spec:
