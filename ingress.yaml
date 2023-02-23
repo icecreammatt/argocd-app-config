@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: argo-nginx-ingress
+  namespace: argocd
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+spec:
+  rules:
+    - host: argo-lookup.stage.mattcarrier.net
+      http:
+        paths:
+          - path: /
+            pathType: Exact
+            backend:
+              service:
+                name: lookup-service
+                port:
+                  number: 5000
