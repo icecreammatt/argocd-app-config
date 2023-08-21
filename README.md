@@ -12,3 +12,9 @@
 8. save settings
 9. sync > synchronize
 10. validate app is green after syncing
+
+## Accessing Argo login password
+
+```bash
+kubectl --namespace argocd get secret argocd-initial-admin-secret -o json | jq -r '.data.password' | base64 -d
+```
